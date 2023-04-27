@@ -1,9 +1,11 @@
 import { createHashRouter } from 'react-router-dom'
 import Root from './routes/Root.jsx'
 import Start from './routes/Start.jsx'
-import Products from './routes/Products.jsx'
+import Products, {loader as ProductsLoader}from './routes/Products.jsx'
 import About from './routes/About.jsx'
 import ErrorPage from './routes/ErrorPage.jsx'
+import Booking from './routes/Booking.jsx'
+import ProductDetails from './routes/ProductDetails.jsx'
 
 // Skapa en router med konfiguration, som beskriver alla routes som ska finnas i appen
 const router = createHashRouter([
@@ -21,11 +23,21 @@ const router = createHashRouter([
 			},
 			{
 				path: 'products',
-				element: <Products />
+				element: <Products />,
+				loader: ProductsLoader ,
 			},
 			{
 				path: 'about',
 				element: <About />
+			},
+			{
+				path: 'booking',
+				element: <Booking />
+			},
+			{
+				path: 'details/:id',
+				element: <ProductDetails/>,
+				loader: ProductsLoader
 			}
 		],
 

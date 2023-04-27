@@ -7,7 +7,9 @@ const Root = () => (
 				<NavLink to="/"> Start </NavLink>
 				<NavLink to="/products"> Products </NavLink>
 				<NavLink to="/about"> About </NavLink>
-				<NavLink to="/error"> This does not exist </NavLink>
+				<NavLink to="/booking"> Booking </NavLink>
+				<NavLink to="/error"> Error </NavLink>
+				<NavLink to="/details/1">DykDator</NavLink>
 			</nav>
 		</header>
 		<main>
